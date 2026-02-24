@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "country": "Sri Lanka",
+    "fiscal_year": 2026,
+    "currency": "LKR",
+    "unit_conventions": {
+      "lkr_bn": "LKR billions",
+      "lkr_mn": "LKR millions",
+      "pct": "percent",
+      "usd_bn": "USD billions"
+    },
+    "generated_at_utc": "2026-02-24T05:58:51.858Z",
+    "completeness_note": "Dataset is limited to figures explicitly available from currently retrieved official speech and activity estimate extracts. Missing figures are marked unavailable in UI."
+  },
+  "headline_metrics": [
+    {
+      "label": "Total Expenditure",
+      "value_lkr_bn": 7212
+    },
+    {
+      "label": "Recurrent Expenditure",
+      "value_lkr_bn": 5260
+    },
+    {
+      "label": "Capital Expenditure",
+      "value_lkr_bn": 1952
+    },
+    {
+      "label": "Total Revenue and Grants",
+      "value_lkr_bn": 4990
+    },
+    {
+      "label": "Tax Revenue",
+      "value_lkr_bn": 4590
+    },
+    {
+      "label": "Non-tax Revenue",
+      "value_lkr_bn": 400
+    },
+    {
+      "label": "Overall Deficit",
+      "value_lkr_bn": 2200
+    },
+    {
+      "label": "Gross Financing Needs",
+      "value_lkr_bn": 5166
+    },
+    {
+      "label": "Debt Repayments",
+      "value_lkr_bn": 2966
+    },
+    {
+      "label": "Deficit to GDP",
+      "value_pct": 7.5
+    },
+    {
+      "label": "Primary Surplus to GDP",
+      "value_pct": 2.3
+    },
+    {
+      "label": "Inflation Assumption",
+      "value_pct": 5
+    },
+    {
+      "label": "GDP Growth Assumption",
+      "value_pct": 5
+    }
+  ],
+  "ministry_allocations": [
+    {
+      "ministry": "Defence",
+      "recurrent_lkr_mn": 442017,
+      "capital_lkr_mn": 21453,
+      "total_lkr_mn": 463470
+    },
+    {
+      "ministry": "Public Administration, Provincial Councils and Local Government",
+      "recurrent_lkr_mn": 375978,
+      "capital_lkr_mn": 20857,
+      "total_lkr_mn": 396835
+    },
+    {
+      "ministry": "Health",
+      "recurrent_lkr_mn": 322831,
+      "capital_lkr_mn": 117985,
+      "total_lkr_mn": 440816
+    },
+    {
+      "ministry": "Education, Higher Education and Vocational Education",
+      "recurrent_lkr_mn": 199310,
+      "capital_lkr_mn": 137314,
+      "total_lkr_mn": 336624
+    },
+    {
+      "ministry": "Public Security and Parliamentary Affairs",
+      "recurrent_lkr_mn": 122495,
+      "capital_lkr_mn": 10833,
+      "total_lkr_mn": 133328
+    },
+    {
+      "ministry": "Transport, Highways, Ports and Civil Aviation",
+      "recurrent_lkr_mn": 118845,
+      "capital_lkr_mn": 232076,
+      "total_lkr_mn": 350921
+    },
+    {
+      "ministry": "Urban Development, Construction and Housing",
+      "recurrent_lkr_mn": 69004,
+      "capital_lkr_mn": 70895,
+      "total_lkr_mn": 139899
+    },
+    {
+      "ministry": "Agriculture, Land, Irrigation, Livestock and Community Development",
+      "recurrent_lkr_mn": 65889,
+      "capital_lkr_mn": 62343,
+      "total_lkr_mn": 128232
+    },
+    {
+      "ministry": "Power and Energy",
+      "recurrent_lkr_mn": 33768,
+      "capital_lkr_mn": 83980,
+      "total_lkr_mn": 117748
+    },
+    {
+      "ministry": "Rural Development, Social Security and Community Empowerment",
+      "recurrent_lkr_mn": 29298,
+      "capital_lkr_mn": 106856,
+      "total_lkr_mn": 136154
+    },
+    {
+      "ministry": "Justice and National Integration",
+      "recurrent_lkr_mn": 27396,
+      "capital_lkr_mn": 5608,
+      "total_lkr_mn": 33004
+    },
+    {
+      "ministry": "Industries and Entrepreneurship Development",
+      "recurrent_lkr_mn": 21505,
+      "capital_lkr_mn": 66344,
+      "total_lkr_mn": 87849
+    },
+    {
+      "ministry": "Women and Child Affairs",
+      "recurrent_lkr_mn": 19295,
+      "capital_lkr_mn": 20695,
+      "total_lkr_mn": 39990
+    },
+    {
+      "ministry": "Fisheries, Aquatic and Ocean Resources",
+      "recurrent_lkr_mn": 11687,
+      "capital_lkr_mn": 18295,
+      "total_lkr_mn": 29982
+    },
+    {
+      "ministry": "Digital Economy",
+      "recurrent_lkr_mn": 9020,
+      "capital_lkr_mn": 15680,
+      "total_lkr_mn": 24700
+    },
+    {
+      "ministry": "Tourism",
+      "recurrent_lkr_mn": 8907,
+      "capital_lkr_mn": 5185,
+      "total_lkr_mn": 14092
+    }
+  ],
+  "tax_policy_changes": [
+    {
+      "name": "Withholding tax on deposit interest",
+      "effective_date": "2026-04-01",
+      "previous_rate_pct": 5,
+      "new_rate_pct": 10
+    },
+    {
+      "name": "Capital gains tax",
+      "effective_date": "2026-04-01",
+      "previous_rate_pct": 10,
+      "new_rate_pct": 15
+    }
+  ],
+  "trend_indicators": {
+    "poverty_rate_pct": [
+      {
+        "year": 2023,
+        "value": 23
+      },
+      {
+        "year": 2025,
+        "value": 13.9
+      }
+    ],
+    "merchandise_exports_usd_bn": [
+      {
+        "year": 2023,
+        "value": 12.8
+      },
+      {
+        "year": 2024,
+        "value": 15.3
+      },
+      {
+        "year": 2025,
+        "value": 18
+      }
+    ]
+  },
+  "derived_insights": {
+    "top_5_ministry_share_pct_of_listed_allocations": 69.2,
+    "capital_share_pct_of_listed_allocations": 34.7
+  }
+}

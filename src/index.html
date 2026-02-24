@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Lanka Budget 2026 — Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="topnav" id="topnav">
+      <div class="topnav__inner">
+        <div class="topnav__brand">
+          <div class="topnav__logo">SL</div>
+          <span>Budget 2026</span>
+        </div>
+        <div class="topnav__links" id="navLinks">
+          <a href="#overview">Overview</a>
+          <a href="#composition">Composition</a>
+          <a href="#ministries">Ministries</a>
+          <a href="#trends">Trends</a>
+          <a href="#tax">Tax</a>
+          <a href="#insights">Insights</a>
+        </div>
+        <button class="topnav__menu" id="menuBtn" aria-label="Toggle menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__content">
+        <div class="hero__badge">Official Data &middot; Fiscal Year 2026</div>
+        <h1>Sri Lanka National Budget<br/>2026 Analytics</h1>
+        <p class="hero__sub" id="heroSub">Loading data...</p>
+      </div>
+      <div class="hero__kpis" id="heroKpis"></div>
+    </header>
+
+    <div class="notice" id="dataNotice">
+      <div class="notice__inner">
+        <div class="notice__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <strong>Data Integrity:</strong> All figures sourced directly from the official 2026 Budget Speech and Activity Estimates (Sri Lanka Treasury). Ministry data covers 16 listed ministries (~39.8% of total expenditure). No interpolation or estimation applied. <a href="/sources.md">View sources</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="main">
+      <section id="status" class="status-bar" aria-live="polite">Loading dashboard data&hellip;</section>
+
+      <section id="overview" class="section">
+        <div class="section__header">
+          <h2>Fiscal Overview</h2>
+          <p>Key budget aggregates organized by category</p>
+        </div>
+        <div id="fiscalGrid" class="fiscal-grid"></div>
+      </section>
+
+      <section id="composition" class="section">
+        <div class="section__header">
+          <h2>Budget Composition</h2>
+          <p>Visual breakdown of expenditure and revenue structure</p>
+        </div>
+        <div class="comp-grid">
+          <div class="comp-card">
+            <h3>Expenditure Split</h3>
+            <div id="expDonut" class="donut-container"></div>
+          </div>
+          <div class="comp-card">
+            <h3>Revenue Split</h3>
+            <div id="revDonut" class="donut-container"></div>
+          </div>
+          <div class="comp-card comp-card--wide">
+            <h3>Fiscal Balance Sheet</h3>
+            <div id="balanceViz" class="balance-viz"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ministries" class="section">
+        <div class="section__header section__header--split">
+          <div>
+            <h2>Ministry Allocations</h2>
+            <p>Explore recurrent vs. capital spending across 16 listed ministries</p>
+          </div>
+          <div class="controls">
+            <div class="search-box">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M10 10l4 4"/></svg>
+              <input id="searchInput" type="search" placeholder="Search ministries..." />
+            </div>
+            <select id="sortSelect">
+              <option value="total">Sort: Total</option>
+              <option value="capital">Sort: Capital</option>
+              <option value="recurrent">Sort: Recurrent</option>
+              <option value="alpha">Sort: A-Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="ministry-layout">
+          <div id="ministryBars" class="ministry-bars"></div>
+          <aside id="ministryDetail" class="ministry-detail">
+            <div class="detail-empty">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 13h4"/></svg>
+              <p>Select a ministry to see its breakdown</p>
+            </div>
+          </aside>
+        </div>
+        <div class="coverage-bar" id="coverageBar"></div>
+      </section>
+
+      <section id="trends" class="section">
+        <div class="section__header section__header--split">
+          <div>
+            <h2>Trend Analysis</h2>
+            <p>Historical data points from official publications</p>
+          </div>
+          <div class="controls">
+            <div class="pill-toggle" id="trendToggle">
+              <button class="pill active" data-val="exports">Exports</button>
+              <button class="pill" data-val="poverty">Poverty</button>
+            </div>
+          </div>
+        </div>
+        <div id="trendChart" class="trend-chart"></div>
+      </section>
+
+      <section id="tax" class="section">
+        <div class="section__header">
+          <h2>Tax Policy Changes</h2>
+          <p>Rate changes effective April 1, 2026</p>
+        </div>
+        <div id="taxCards" class="tax-cards"></div>
+      </section>
+
+      <section id="insights" class="section">
+        <div class="section__header">
+          <h2>Analytical Insights</h2>
+          <p>Data-driven observations derived from budget figures</p>
+        </div>
+        <div id="insightCards" class="insight-cards"></div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="section__header">
+          <h2>Methodology & Sources</h2>
+        </div>
+        <div class="method-grid">
+          <div class="method-card">
+            <h3>Data Pipeline</h3>
+            <p>Figures extracted from official Budget Speech and Activity Estimate PDFs published by the Sri Lanka Treasury. Transformed via a reproducible pipeline (<code>scripts/build_data.mjs</code>) with zero interpolation.</p>
+          </div>
+          <div class="method-card">
+            <h3>Coverage</h3>
+            <p>Ministry allocations cover 16 ministries from the Activity Estimate. This is a subset of total government expenditure. Headline fiscal metrics cover the full national budget.</p>
+          </div>
+          <div class="method-card">
+            <h3>Sources</h3>
+            <p>All source URLs and retrieval timestamps documented in <a href="/sources.md">sources.md</a>. Primary: Budget Speech 2026, Approved Estimates, and Activity Estimates from <code>treasury.gov.lk</code>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>Sri Lanka Budget 2026 Dashboard &middot; Data from official Treasury publications</p>
+        <p class="footer__gen" id="footerGen"></p>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

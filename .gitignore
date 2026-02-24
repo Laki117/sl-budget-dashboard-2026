@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+*.log
+
+# Local Netlify folder
+.netlify
+
+# Large binary/PDF source files (not tracked in repo)
+data/raw/*.bin
+data/raw/*.pdf
